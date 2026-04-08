@@ -3,13 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* 日本語キーボード特有のコードをHID数値で直接定義 (エラー防止) */
-#define JP_HNK 138  /* 変換 */
-#define JP_MHN 139  /* 無変換 */
-#define JP_KNA 136  /* カタカナひらがな */
-#define JP_YEN 137  /* ¥ */
-#define JP_CRT 141  /* ^ */
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -24,22 +17,22 @@
             bindings = <
 &kp Q      &kp W      &kp E      &kp R      &kp T                                          &kp Y      &kp U      &kp I      &kp O      &kp P
 &kp A      &kp S      &kp D      &kp F      &kp G                                          &kp H      &kp J      &kp K      &kp L      &kp SEMI
-&kp Z      &kp X      &kp C      &kp V      &kp B      &mt LEFT_WIN JP_HNK &lt 3 JP_MHN    &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
-&kp LEFT_CONTROL &kp LEFT_SHIFT           &mt LEFT_ALT BACKSPACE &lt 1 SPACE  &lt 2 ENTER &mt RIGHT_ALT BACKSPACE &kp RIGHT_SHIFT &kp RIGHT_CONTROL
+&kp Z      &kp X      &kp C      &kp V      &kp B      &mt LGUI 138       &lt 3 139        &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
+&kp LCTL   &kp LSFT                        &mt LALT BSPC &lt 1 SPC        &lt 2 RET        &mt RALT BSPC            &kp LSFT   &kp LCTL
             >;
         };
 
-        /* Layer 1: Navigation & JP Symbols */
+        /* Layer 1: Navigation & JP Symbols (Excel準拠) */
         layer_1 {
             bindings = <
-&kp ESCAPE &kp GRAVE   &kp END    &kp INSERT &kp TAB                                       &kp LS(JP_CRT) &none    &kp UP     &kp JP_CRT  &kp JP_YEN
-&kp HOME   &kp SLCK    &kp DELETE &kp K_VOL_UP &kp PG_UP                                   &kp LS(SEMI)   &kp LEFT &kp DOWN   &kp RIGHT   &kp EQUAL
-&kp PAUSE  &kp JP_KNA  &none      &kp K_VOL_DN &kp PG_DN  &trans               &trans      &mkp MB1       &mkp MB2 &kp LS(LBKT) &kp LS(RBKT) &none
-&trans     &trans                            &trans     &trans               &trans      &trans                             &trans       &trans
+&kp ESC    &kp GRAVE  &kp END    &kp INS    &kp TAB                                        &kp LS(141) &none     &kp UP     &kp 141    &kp 137
+&kp HOME   &kp SLCK   &kp DEL    &kp K_VOL_UP &kp PG_UP                                    &kp LS(SEMI) &kp LEFT  &kp DOWN   &kp RIGHT  &kp MINUS
+&kp PAUSE  &kp 136    &none      &kp K_VOL_DN &kp PG_DN  &trans              &trans        &mkp MB1    &mkp MB2   &kp LS(LBKT) &kp LS(RBKT) &none
+&trans     &trans                            &trans     &trans              &trans        &trans                           &trans     &trans
             >;
         };
 
-        /* Layer 2: Numbers & Functions */
+        /* Layer 2: Numbers & Functions (Excel準拠) */
         layer_2 {
             bindings = <
 &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                         &kp N6      &kp N7     &kp N8     &kp N9     &kp N0
