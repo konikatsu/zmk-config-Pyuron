@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #define MOUSE 6
 
-/* 日本語キーコードが未定義の場合のエラーを防ぐための定義 */
 #define JP_HNK 0x8a
 #define JP_MHN 0x8b
 #define JP_KNA 0x88
@@ -43,7 +42,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O         &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G                                                 &kp H        &kp J  &kp K      &kp L         &kp SEMI
+&kp A             &kp S         &kp D         &kp F             &kp G                                                 &kp H        &kp J  &kp K      &kp L         &kp SEMICOLON
 &kp Z             &kp X         &kp C         &kp V             &kp B           &mt LEFT_WIN JP_HNK   &lt 3 JP_MHN    &kp N        &kp M  &kp COMMA  &kp DOT       &kp SLASH
 &kp LCTRL         &kp LEFT_WIN                                  &mt LEFT_ALT BACKSPACE  &lt 1 SPACE   &lt 2 ENTER     &mt RIGHT_ALT BACKSPACE                 &kp RIGHT_ALT &kp DEL
             >;
@@ -51,9 +50,9 @@
 
         layer_1 {
             bindings = <
-&kp ESCAPE        &kp JP_KNA    &kp END       &kp INSERT        &kp TAB                                               &kp LS(JP_CRT) &none  &kp UP    &kp JP_CRT    &kp JP_YEN
-&kp HOME          &kp SLCK      &kp DELETE    &kp K_VOL_UP      &kp PG_UP                                             &kp LS(SEMI)    &kp LEFT &kp DOWN  &kp RIGHT     &kp MINUS
-&kp PAUSE         &kp JP_KNA    &none         &kp K_VOL_DN      &kp PG_DN       &trans                &trans          &mkp MB1        &mkp MB2 &kp LS(LBKT) &kp LS(RBKT) &none
+&kp ESCAPE        &kp JP_KNA    &kp END       &kp INSERT        &kp TAB                                               &kp LS(JP_CRT) &none  &kp UP_ARROW    &kp JP_CRT    &kp JP_YEN
+&kp HOME          &kp SCROLLLOCK &kp DELETE   &kp C_VOLUME_UP   &kp PAGE_UP                                           &kp LS(SEMICOLON) &kp LEFT_ARROW &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp MINUS
+&kp PAUSE_BREAK   &kp JP_KNA    &none         &kp C_VOLUME_DOWN &kp PAGE_DOWN   &trans                &trans          &mkp MB1        &mkp MB2 &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &none
 &trans            &trans                                        &trans          &trans                &trans          &trans                               &trans        &trans
             >;
         };
@@ -62,7 +61,7 @@
             bindings = <
 &kp N1            &kp N2        &kp N3        &kp N4            &kp N5                                                &kp N6          &kp N7  &kp N8     &kp N9        &kp N0
 &kp F1            &kp F2        &kp F3        &kp F4            &kp F5                                                &kp F6          &kp F7  &kp F8     &kp F9        &kp F10
-&kp K_PREV        &kp K_PP      &kp K_NEXT    &kp K_MUTE        &kp PSCRN       &trans                &trans          &kp LNLCK       &kp K_APP &kp CAPS   &kp F11       &kp F12
+&kp C_PREVIOUS    &kp C_PLAY_PAUSE &kp C_NEXT &kp C_MUTE        &kp PRINTSCREEN &trans                &trans          &kp KP_NUMLOCK  &kp K_APPLICATION &kp CAPS_LOCK   &kp F11       &kp F12
 &trans            &trans                                        &trans          &trans                &trans          &trans                               &trans        &trans
             >;
         };
