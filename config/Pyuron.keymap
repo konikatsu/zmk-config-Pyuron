@@ -17,18 +17,18 @@
             bindings = <
 &kp Q      &kp W      &kp E      &kp R      &kp T                                          &kp Y      &kp U      &kp I      &kp O      &kp P
 &kp A      &kp S      &kp D      &kp F      &kp G                                          &kp H      &kp J      &kp K      &kp L      &kp SEMI
-&kp Z      &kp X      &kp C      &kp V      &kp B      &mt LGUI 138       &lt 3 139        &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
-&kp LCTL   &kp LSFT                        &mt LALT BSPC &lt 1 SPC        &lt 2 RET        &mt RALT BSPC            &kp LSFT   &kp LCTL
+&kp Z      &kp X      &kp C      &kp V      &kp B      &mt LEFT_WIN INT4  &lt 3 INT5       &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH
+&kp LCTRL  &kp LEFT_SHIFT                  &mt LEFT_ALT BACKSPACE &lt 1 SPACE  &lt 2 ENTER &mt RIGHT_ALT BACKSPACE          &kp RIGHT_SHIFT &kp RIGHT_CONTROL
             >;
         };
 
         /* Layer 1: Navigation & JP Symbols (Excel準拠) */
         layer_1 {
             bindings = <
-&kp ESC    &kp GRAVE  &kp END    &kp INS    &kp TAB                                        &kp LS(141) &none     &kp UP     &kp 141    &kp 137
-&kp HOME   &kp SLCK   &kp DEL    &kp K_VOL_UP &kp PG_UP                                    &kp LS(SEMI) &kp LEFT  &kp DOWN   &kp RIGHT  &kp MINUS
-&kp PAUSE  &kp 136    &none      &kp K_VOL_DN &kp PG_DN  &trans              &trans        &mkp MB1    &mkp MB2   &kp LS(LBKT) &kp LS(RBKT) &none
-&trans     &trans                            &trans     &trans              &trans        &trans                           &trans     &trans
+&kp ESC    &kp INT2   &kp END    &kp INS    &kp TAB                                        &kp LS(INT7) &none    &kp UP     &kp INT7   &kp INT3
+&kp HOME   &kp SLCK   &kp DEL    &kp K_VOL_UP &kp PG_UP                                    &kp LS(SEMI) &kp LEFT &kp DOWN   &kp RIGHT  &kp MINUS
+&kp PAUSE  &kp INT2   &none      &kp K_VOL_DN &kp PG_DN  &trans               &trans       &mkp MB1     &mkp MB2 &kp LS(LBKT) &kp LS(RBKT) &none
+&trans     &trans                            &trans     &trans               &trans       &trans                           &trans     &trans
             >;
         };
 
